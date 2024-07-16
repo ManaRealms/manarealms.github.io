@@ -2,98 +2,103 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"content="width=device-width, initial-scale=1.0">
 <title>VoidPirates Wiki</title>
-<link rel="icon"type="image/x-icon"href="https://manarealms.github.io/i.ico"/>
+<link rel="icon"type="image/x-icon"href="/i.ico"/>
 <style>
-	body {
-		background-color: aliceblue;
-	}
-	.pages {
-		display: grid;
-		grid-template-columns: repeat(10, 150px);
-		background-color: white;
-		border: 2px solid lightgray;
-		padding: 100px;
-		margin: 30px;
-	}
-	.title {
-		text-align: center;
-		font-size: 100px;
-		font-weight: 900;
-		font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-	}
-	.page {
-		height: 124px;
-		width: 80px;
-		position: relative;
-		cursor: pointer;
-    }
-	.pageText {
-		height: 44px;
-		width: 80px;
-		bottom: 0;
-		position: absolute;
-		text-align: center;
-		font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-	}
+body {
+	background-color: aliceblue;
+}
+.pages {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	/*
+	grid-template-columns: repeat(10, 150px);
+	*/
+	background-color: white;
+	border: 2px solid lightgray;
+	padding:80px;
+	margin: 30px;
+}
+.page {
+	height: 124px;
+	width: 80px;
+	position: relative;
+	cursor: pointer;
+}
+
+.pageText {
+	height: 44px;
+	width: 80px;
+	bottom: 0;
+	position: absolute;
+	text-align: center;
 	
-	table {
-		width: 50%;
-		border-collapse: collapse;
-		margin: 20px 0;
-	}
-	table, th, td {
-		border: 1px solid black;
-	}
-	th, td {
-		padding: 8px;
-		text-align: left;
-	}
-	thead {
-		background-color: #3498db;
-		color: white;
-	}
+}
+/*header {
+	text-align: center;
+	font-size: 50px;
+	font-weight: 900;
+}*/
+
+header {
+	font-size: 70px;
+	font-weight: 900;
+	text-align: center;
+}
+
+p {
+	text-align: center;
+	font-size: 30px;
+	margin: 0;
+}
+
+.sysFont {
+	font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif;
+}
+
 </style>
 </head>
 <body>
-<div class="title">VOIDPIRATES WIKI</div>
+<header class="sysFont">VOID PIRATES WIKI</header>
+<p class="sysFont">Home</p>
 <div class="pages">
 	<div class="page" data-target="sell-list">
 		<img src="https://minecraft.wiki/images/Gold_Ingot_JE4_BE2.png" width="80" height="80">
-		<div class="pageText">Sell List</div>
+		<div class="pageText sysFont">Sell List</div>
 	</div>
 	<div class="page" data-target="world-settings">
 		<img src="https://minecraft.wiki/images/Grass_Block_JE7_BE6.png"width="80"height="80">
-		<div class="pageText">World Settings</div>
+		<div class="pageText sysFont">World Settings</div>
 	</div>
 	<div class="page" data-target="items">
 		<img src="https://minecraft.wiki/images/Iron_Sword_JE2_BE2.png"width="80"height="80">
-		<div class="pageText">Items</div>
+		<div class="pageText sysFont">Items</div>
 	</div>
 	<div class="page" data-target="generator">
 		<img src="https://minecraft.wiki/images/Cobblestone.png"width="80"height="80">
-		<div class="pageText">Generator</div>
+		<div class="pageText sysFont">Generator</div>
 	</div>
 	<div class="page" data-target="commands">
 		<img src="https://minecraft.wiki/images/Impulse_Command_Block.gif"width="80"height="80">
-		<div class="pageText">Commands</div>
+		<div class="pageText sysFont">Commands</div>
 	</div>
 	<div class="page" data-target="islands">
 		<img src="https://minecraft.wiki/images/thumb/Skyblock_Island.png/623px-Skyblock_Island.png"width="80"height="80">
-		<div class="pageText">Islands</div>
+		<div class="pageText sysFont">Islands</div>
 	</div>
 	<div class="page" data-target="crews">
 		<img src="https://minecraft.wiki/images/thumb/Player_Head_%288%29_JE5.png/150px-Player_Head_%288%29_JE5.png"width="80"height="80">
-		<div class="pageText">Crews</div>
+		<div class="pageText sysFont">Crews</div>
 	</div>
 	<div class="page" data-target="treasure-islands">
 		<img src="https://minecraft.wiki/images/Chest.gif"width="80"height="80">
-		<div class="pageText">Treasure Islands</div>
+		<div class="pageText sysFont">Treasure Islands</div>
 	</div>
 	
 
-    
+	
 
 </div>
 
@@ -103,8 +108,8 @@ const path = window.location.pathname;
 document.querySelectorAll(".page").forEach((div) => {
 	const target = div.getAttribute("data-target");
 	div.addEventListener("click", () => {
-        window.location.href = path + target;
-    });
+		window.location.href = path + target;
+	});
 });
 
 

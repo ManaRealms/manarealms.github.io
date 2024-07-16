@@ -3,46 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sell List</title>
+<title>Sell List - VoidPirates Wiki</title>
 <link rel="icon"type="image/x-icon"href="/i.ico"/>
-	<style>
-		table {
-			width: 50%;
-			border-collapse: collapse;
-			margin: 25px 0;
-			font-size: 18px;
-			text-align: left;
-			margin: 25px auto;
-		}
-		th, td {
-			padding: 12px;
-		}
-		th {
-			border: 2px solid black
-		}
-		td {
-			border: 2px solid lightgray
-		}
-		h2 {
-			text-align: center;
-		}
-	</style>
+<style>
+body {
+	background-color: aliceblue;
+}
+header {
+	font-size: 70px;
+	font-weight: 900;
+	text-align: center;
+}
+p {
+	text-align: center;
+	font-size: 30px;
+	margin: 0;
+}
+.sysFont {
+	font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif;
+}
+
+table {
+	width: 50%;
+	border-collapse: collapse;
+	margin: 25px 0;
+	font-size: 18px;
+	text-align: left;
+	margin: 25px auto;
+}
+th, td {
+	padding: 12px;
+	background-color: white;
+}
+th {
+	border: 2px solid black
+}
+td {
+	border: 2px solid lightgray
+}
+h2 {
+	text-align: center;
+}
+</style>
 </head>
 <body>
-
-	<h2>Full Sell List</h2>
-	<table id="itemsTable">
-		<thead>
-			<tr>
-				<th>Amount Needed</th>
-				<th>Item</th>
-				<th>Gold Nuggets</th>
-			</tr>
-		</thead>
-		<tbody>
-			<!-- JavaScript will populate this section -->
-		</tbody>
-	</table>
+<header class="sysFont">VOID PIRATES WIKI</header>
+<p class="sysFont">Sell List</p>
+<table id="itemsTable">
+	<thead>
+		<tr>
+			<th>Amount Needed</th>
+			<th>Item</th>
+			<th>Gold Nuggets</th>
+		</tr>
+	</thead>
+	<tbody>
+		<!-- JavaScript will populate this section -->
+	</tbody>
+</table>
 
 <script>
 const data = `
@@ -54,6 +72,99 @@ const data = `
 1: spruce_sapling: 1
 1: birch_log: 4
 1: birch_planks: 1
+1: birch_sapling: 1
+1: jungle_log: 4
+1: jungle_planks: 1
+1: jungle_sapling: 1
+1: acacia_log: 4
+1: acacia_planks: 1
+1: acacia_sapling: 1
+1: dark_oak_log: 4
+1: dark_oak_planks: 1
+1: dark_oak_sapling: 1
+1: cherry_log: 4
+1: cherry_planks: 1
+1: cherry_sapling: 1
+1: mangrove_log: 4
+1: mangrove_planks: 1
+1: mangrove_propagule: 1
+1: bamboo_block: 1
+2: bamboo_planks: 1
+1: warped_stem: 4
+1: warped_planks: 1
+1: crimson_stem: 4
+1: crimson_planks: 1
+2: stick: 1
+1: charcoal: 2
+1: coal: 2
+1: coal_block: 18
+1: diamond: 108
+1: diamond_block: 972
+1: emerald: 16
+1: emerald_block: 144
+1: raw_iron: 5
+1: iron_ingot: 8
+1: iron_block: 72
+1: copper_ingot: 3
+1: copper_block: 27
+1: lapis_lazuli: 2
+1: lapis_block: 18
+1: redstone: 1
+1: redstone_block: 9
+8: wheat_seeds: 1
+4: melon_seeds: 1
+4: pumpkin_seeds: 1
+1: wheat: 4
+1: pumpkin: 4
+1: melon: 5
+2: melon_slice: 1
+1: beetroot: 3
+1: kelp: 1
+1: nether_wart: 90
+1: chorus_fruit: 4
+2: bamboo: 1
+1: apple: 4
+1: cake: 36
+1: egg: 2
+1: sugar_cane: 3
+1: sugar: 2
+1: cactus: 5
+1: brown_mushroom: 4
+1: red_mushroom: 4
+1: carrot: 2
+1: potato: 3
+1: pufferfish: 8
+1: cod: 2
+1: salmon: 8
+1: tropical_fish: 24
+8: rotten_flesh: 1
+2: gunpowder: 1
+8: bone: 1
+8: string: 1
+2: spider_eye: 1
+8: cobblestone: 1
+4: stone: 1
+1: porkchop: 2
+1: beef: 2
+1: mutton: 2
+1: chicken: 2
+1: feather: 1
+1: leather: 10
+1: amethyst_shard: 24
+1: prismarine_shard: 1
+1: prismarine_crystals: 4
+8: slime_ball: 1
+6: arrow: 1
+1: ender_pearl: 4
+1: wither_skeleton_skull: 32
+1: nautilus_shell: 4
+1: poppy: 1
+1: totem_of_undying: 1
+1: glow_ink_sac: 6
+4: nether_wart_block: 1
+4: warped_wart_block: 1
+1: gold_nugget: 1
+1: ghast_tear: 8
 `;
 
 const tableBody = document.querySelector('#itemsTable tbody');
