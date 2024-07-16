@@ -1,11 +1,71 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>VoidPirates Wiki - Sell List</title>
-		<style>
-		</style>
-	</head>
-	<body>
-		Welcome to Sell List
-	</body>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sell List</title>
+<link rel="icon"type="image/x-icon"href="/i.ico"/>
+	<style>
+		table {
+			width: 50%;
+			border-collapse: collapse;
+			margin: 25px 0;
+			font-size: 18px;
+			text-align: left;
+			margin: 25px auto;
+		}
+		th, td {
+			padding: 12px;
+		}
+		th {
+			border: 2px solid black
+		}
+		td {
+			border: 2px solid lightgray
+		}
+		h2 {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+
+	<h2>Full Sell List</h2>
+	<table id="itemsTable">
+		<thead>
+			<tr>
+				<th>Amount Needed</th>
+				<th>Item</th>
+				<th>Gold Nuggets</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- JavaScript will populate this section -->
+		</tbody>
+	</table>
+
+<script>
+const data = `
+1: oak_log: 2
+2: oak_planks: 1
+1: oak_sapling: 1
+1: spruce log: 4
+1: spruce_planks: 1
+1: spruce_sapling: 1
+1: birch_log: 4
+1: birch_planks: 1
+`;
+
+const tableBody = document.querySelector('#itemsTable tbody');
+const rows = data.trim().split('\n');
+
+rows.forEach(row => {
+	const [amount, item, gold] = row.split(':').map(text => text.trim());
+	const tr = document.createElement('tr');
+	tr.innerHTML = `<td>${amount}</td><td>${item.replace('_', ' ')}</td><td>${gold}</td>`;
+	tableBody.appendChild(tr);
+});
+</script>
+
+</body>
 </html>
